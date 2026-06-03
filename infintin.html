@@ -1,0 +1,2350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Infintin Investor Brief</title>
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#020814;
+    color:#ffffff;
+    font-family:'Inter',sans-serif;
+}
+
+/* ==========================
+   COMMON
+========================== */
+
+.slide{
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+/* ==========================
+   SLIDE 1
+========================== */
+
+#slide-1{
+
+    background:
+    radial-gradient(
+        circle at 85% 30%,
+        rgba(0,183,255,.12),
+        transparent 30%
+    ),
+    linear-gradient(
+        to right,
+        #020814,
+        #041321
+    );
+
+    padding:60px 120px;
+}
+
+#slide-1::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,.04) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.04) 1px,
+        transparent 1px
+    );
+
+    background-size:40px 40px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.company{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:55px;
+    height:55px;
+    background:white;
+    border-radius:4px;
+}
+
+.company h3{
+    letter-spacing:2px;
+}
+
+.company p{
+    letter-spacing:4px;
+    font-size:13px;
+}
+
+.investor-brief{
+    text-align:right;
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+.hero-content{
+    margin-top:140px;
+    position:relative;
+    z-index:2;
+}
+
+.tagline{
+    color:#00b7ff;
+    letter-spacing:8px;
+    margin-bottom:30px;
+}
+
+.hero-content h1{
+    font-family:'Playfair Display',serif;
+    font-size:90px;
+    line-height:1;
+    margin-bottom:30px;
+}
+
+.hero-content span{
+    color:#00b7ff;
+}
+
+.hero-description{
+    max-width:800px;
+    font-size:24px;
+    line-height:1.4;
+}
+
+.slide-footer{
+    position:absolute;
+    bottom:60px;
+    left:120px;
+    right:120px;
+
+    display:flex;
+    justify-content:space-between;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:25px;
+
+    color:#cfcfcf;
+}
+
+/* ==========================
+   SLIDE 2
+========================== */
+
+#slide-2{
+    padding:80px 120px;
+
+    background:
+    radial-gradient(
+        circle at 85% 30%,
+        rgba(0,183,255,.08),
+        transparent 40%
+    ),
+    linear-gradient(
+        to right,
+        #020814,
+        #041321
+    );
+}
+
+.about-section{
+    max-width:1400px;
+    margin:auto;
+}
+
+.about-label{
+    color:goldenrod;
+    font-size:22px;
+    font-weight:1000;
+    letter-spacing:6px;
+    margin-bottom:25px;
+}
+
+.about-title{
+    font-family:'Playfair Display',serif;
+    color:#00b7ff;
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:80px;
+}
+
+.about-content{
+    display:flex;
+    justify-content:space-between;
+    gap:80px;
+}
+
+.about-left{
+    flex:1;
+}
+
+.about-description{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    line-height:1.3;
+    max-width:700px;
+    margin-bottom:70px;
+}
+
+.stats-row{
+    display:flex;
+    gap:60px;
+}
+
+.stat-number{
+    font-size:64px;
+    font-weight:700;
+    color:#00b7ff;
+}
+
+.stat-number.white{
+    color:white;
+}
+
+.stat-text{
+    margin-top:10px;
+    font-size:15px;
+    letter-spacing:3px;
+    font-weight: 1000;
+    color:goldenrod;
+}
+
+.snapshot-box{
+    width:520px;
+    background:#101927;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;
+    padding:40px;
+}
+
+.snapshot-box h3{
+    letter-spacing:4px;
+    margin-bottom:30px;
+}
+
+.snapshot-box ul{
+    padding-left:20px;
+}
+
+.snapshot-box li{
+    margin-bottom:22px;
+    line-height:1.7;
+    color:#d7d7d7;
+}
+
+.snapshot-box strong{
+    color:white;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1024px){
+
+    #slide-1,
+    #slide-2{
+        padding:40px;
+    }
+
+    .hero-content h1{
+        font-size:54px;
+    }
+
+    .about-title{
+        font-size:48px;
+    }
+
+    .about-content{
+        flex-direction:column;
+    }
+
+    .snapshot-box{
+        width:100%;
+    }
+
+    .stats-row{
+        flex-wrap:wrap;
+    }
+
+    .slide-footer{
+        left:40px;
+        right:40px;
+    }
+}
+
+/* ==========================
+   SLIDE 3
+========================== */
+
+#slide-3{
+    min-height:100vh;
+    padding:80px 120px;
+    background:
+    radial-gradient(
+        circle at 80% 20%,
+        rgba(0,183,255,.06),
+        transparent 40%
+    ),
+    linear-gradient(
+        to right,
+        #020814,
+        #041321
+    );
+}
+
+.problem-label{
+    color:#00b7ff;
+    font-size:20px;
+    letter-spacing:8px;
+    margin-bottom:25px;
+}
+
+.problem-title{
+    font-family:'Playfair Display',serif;
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:60px;
+}
+
+.problem-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.problem-card{
+    position:relative;
+    background:#141d2b;
+    border:1px solid rgba(255,255,255,.06);
+    padding:28px;
+    min-height:290px;
+    overflow:hidden;
+}
+
+.problem-card::after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:24px;
+    height:24px;
+    background:#020814;
+    clip-path:polygon(100% 0,0 0,100% 100%);
+}
+
+.card-number{
+    position:absolute;
+    right:25px;
+    top:25px;
+    color:#6f7685;
+    font-weight:700;
+    font-size:24px;
+}
+
+.icon-box{
+    width:56px;
+    height:56px;
+    border-radius:12px;
+    background:rgba(0,183,255,.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    margin-bottom:25px;
+}
+
+.problem-card h3{
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.problem-card p{
+    color:#d7d7d7;
+    line-height:1.6;
+    font-size:22px;
+    margin-bottom:28px;
+}
+
+.highlight{
+    color:#f5d25c;
+    letter-spacing:4px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.highlight span{
+    color:#00b7ff;
+    font-size:28px;
+    font-weight:700;
+    margin-right:10px;
+}
+
+.slide3-footer{
+    margin-top:50px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;
+    justify-content:space-between;
+    color:#8a8a8a;
+}
+
+/* Responsive */
+
+@media(max-width:1024px){
+
+    .problem-grid{
+        grid-template-columns:1fr;
+    }
+
+    .problem-title{
+        font-size:48px;
+    }
+
+    .problem-card{
+        min-height:auto;
+    }
+}
+
+/* ==========================
+   SHARED SECTION LABEL
+========================== */
+
+.section-label{
+    color:#00b7ff;
+    letter-spacing:8px;
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+/* ==========================
+   SLIDE 4
+========================== */
+
+#slide-4{
+    min-height:100vh;
+    padding:80px 120px;
+    background:#020814;
+}
+
+.why-title{
+    font-family:'Playfair Display',serif;
+    font-size:72px;
+    color:#f7d54a;
+    margin-bottom:25px;
+}
+
+.why-subtitle{
+    font-size:22px;
+    max-width:900px;
+    line-height:1.5;
+    margin-bottom:50px;
+}
+
+.force-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.force-card{
+    min-height:500px;
+    padding:35px;
+}
+
+.force-card.blue{
+    background:#16a8df;
+    color:#07121d;
+}
+
+.force-card.light{
+    background:#ececec;
+    color:#1b1b1b;
+}
+
+.force-number{
+    font-size:64px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+.force-card h3{
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.force-card p{
+    line-height:1.6;
+    font-size:18px;
+}
+
+/* ==========================
+   SLIDE 5
+========================== */
+
+#slide-5{
+    min-height:100vh;
+    padding:80px 120px;
+    background:#020814;
+}
+
+.technology-title{
+    font-family:'Playfair Display',serif;
+    font-size:72px;
+    margin-bottom:80px;
+}
+
+.technology-layout{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:80px;
+}
+
+.tech-item{
+    display:flex;
+    gap:25px;
+    margin-bottom:55px;
+}
+
+.tech-item span{
+    color:#00b7ff;
+    font-size:48px;
+    font-weight:700;
+    min-width:70px;
+}
+
+.tech-item h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.tech-item p{
+    color:#f7d54a;
+    line-height:1.5;
+    font-size:18px;
+}
+
+.comparison-table{
+    width:100%;
+    height: 100%;
+    border-collapse:collapse;
+    border-width: 5px;
+}
+
+.comparison-table th{
+    text-align:left;
+    padding:18px;
+    font-size:18px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.comparison-table td{
+    padding:18px;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.highlight-row{
+    background:rgba(0,183,255,.12);
+}
+
+.highlight-row td:first-child{
+    color:#00b7ff;
+    font-weight:700;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1200px){
+
+    .force-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .technology-layout{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .force-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-title,
+    .technology-title{
+        font-size:48px;
+    }
+}
+
+/* Global Slide Setup Definitions (Ensure hierarchy consistency) */
+:root {
+  --bg-dark: #0a0c10;
+  --text-light: #ffffff;
+  --accent-blue: #00b4d8;
+  --card-light-bg: #f0f2f5;
+  --text-dark: #000000;
+  --accent-green: #2ecc71;
+  --accent-yellow: #d4af37;
+}
+
+.slide-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 60px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slide-header {
+  margin-bottom: 40px;
+}
+
+.slide-tagline {
+  color: var(--accent-blue);
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.slide-pretitle {
+  font-family: "Georgia", serif;
+  font-size: 24px;
+  font-weight: initial;
+  letter-spacing: 2px;
+  margin: 0 0 15px 0;
+}
+
+.slide-title {
+  font-family: "Georgia", serif;
+  font-size: 44px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.text-accent { color: var(--accent-blue); }
+.text-bold { font-weight: bold; }
+.text-green { color: var(--accent-green); }
+.text-yellow { color: #f1c40f; }
+.text-muted { opacity: 0.6; }
+
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1.1sfr 0.9fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* Footer layout rules */
+.slide-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 60px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+/* --- Slide 6 Specific --- */
+.performance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.performance-table th {
+  text-align: left;
+  padding: 15px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.performance-table td {
+  padding: 18px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.metric-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  padding: 30px 25px;
+}
+
+.metric-value {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.metric-label {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* --- Slide 7 Specific --- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pricing-card {
+  background-color: var(--card-light-bg);
+  color: var(--text-dark);
+  border-radius: 2px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-type {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #1e3d59;
+}
+
+.card-badge {
+  background-color: #1b6ca8;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.card-main {
+  margin-bottom: auto;
+  font-weight: bold;
+}
+
+.card-spec {
+  font-size: 38px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+.card-spec .unit {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.card-product-name {
+  font-family: "Georgia", serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin: 0 0 40px 0;
+}
+
+.card-details {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+  .grid-2col, .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .pricing-card {
+    min-height: auto;
+  }
+}
+
+/* --- Slide 8 Specific --- */
+#slide-8 .slide-title {
+  font-size: 54px;
+  margin-top: 10px;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.Matrix-container {
+  margin-top: 60px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.comparison-table th {
+  padding: 15px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.comparison-table th.feature-col {
+  width: 35%;
+}
+
+.comparison-table th.comp-col {
+  width: 16.25%;
+}
+
+.comparison-table td {
+  padding: 20px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.comparison-table td.feature-name {
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Match layout variations from original font hierarchy mix */
+.comparison-table tbody tr:nth-child(-n+4) td.feature-name {
+  text-transform: uppercase;
+}
+
+.comparison-table td.check-cell {
+  text-align: center;
+  font-size: 18px;
+}
+
+#slide-8 .text-green {
+  color: #00ffcc; /* Vibrantly distinct accent check color */
+  font-weight: bold;
+}
+
+.matrix-summary {
+  margin-top: 45px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Handling */
+@media (max-width: 768px) {
+  .comparison-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* --- Global Additions & Overrides --- */
+.font-sans {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-weight: 700;
+}
+
+.slide-light {
+  background-color: #ffffff;
+  color: #555555;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 60px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.dark-border {
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.opacity-7 { opacity: 0.7; }
+
+/* --- Slide 9 Specific --- */
+.market-bars-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.market-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.market-lbl {
+  width: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent-blue);
+  letter-spacing: 1px;
+}
+
+.bar-track {
+  flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  display: flex;
+  align-items: center;
+  padding: 22px 25px;
+  gap: 20px;
+  border-radius: 6px;
+}
+
+.som-fill { background: linear-gradient(90deg, #103154 0%, #16406c 40%, transparent 40.1%); width: 100%; }
+.sam-fill { background: linear-gradient(90deg, #1661ab 0%, #1d72c4 67%, transparent 67.1%); width: 100%; }
+.tam-fill { background: #0088cc; width: 100%; }
+
+.bar-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.bar-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.3px;
+}
+
+/* --- Slide 10 Specific --- */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.timeline-card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  padding: 30px 20px;
+  min-height: 380px;
+  box-sizing: border-box;
+}
+
+.timeline-card.active {
+  border: 1px solid #cceeff;
+  background-color: #f4fbc3; /* Soft accent dynamic blend matching presentation canvas visually */
+  background: #ffffff;
+  border-color: #0077cc;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.step-num {
+  font-size: 42px;
+  font-weight: 800;
+  color: black;
+}
+
+.status-badge {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.badge-done { background-color: #d4edda; color: #155724; }
+.badge-now { background-color: #cce5ff; color: #004085; }
+
+.timeline-heading {
+  font-size: 22px;
+  color: #111;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.timeline-desc {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Slide 11 Specific --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.team-card {
+  border: 1px solid #1a5f9c;
+  border-radius: 4px;
+  padding: 30px 25px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  background-color: #111;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-identity {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-role {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0077cc;
+  letter-spacing: 0.5px;
+}
+
+.profile-name {
+  font-size: 20px;
+  color: #111;
+  margin: 3px 0 0 0;
+}
+
+.profile-bio {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.advisors-panel {
+  background-color: #f5f7fa;
+  border-radius: 6px;
+  padding: 25px 30px;
+  margin-top: 35px;
+}
+
+.advisor-row {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.primary-advisor {
+  margin-bottom: 15px;
+}
+
+.advisor-label {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #777;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.secondary-advisors {
+  color: #666;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 15px;
+}
+
+/* --- Slide 12 Specific --- */
+.slide-subtitle {
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 15px 0 0 0;
+  max-width: 900px;
+}
+
+.funds-allocation {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.allocation-title {
+  color: var(--accent-blue);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.progress-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #00a8ff;
+  border-radius: 4px;
+}
+
+.ask-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.metric-block-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blue-highlight-card {
+  background-color: #0066cc;
+  border-color: #0077ee;
+}
+
+.mb-value {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.mb-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.blue-highlight-card .mb-label {
+  opacity: 0.9;
+}
+
+/* --- Slide 13 Specific (Split Contact Form Grid) --- */
+.slide-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.split-left-brand {
+  background-color: #0d5cb3;
+  color: #ffffff;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-box-mock {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon-circle {
+  color: #0d5cb3;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: serif;
+}
+
+.brand-txt-title {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.contact-cta {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.contact-subtext {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.85;
+  max-width: 440px;
+  margin: 0;
+}
+
+.brand-mission-statement {
+  font-family: monospace;
+  font-size: 13px;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+}
+
+.split-right-channels {
+  background-color: #080a0e;
+  color: #ffffff;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.channels-stack-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.channel-card-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.channel-icon-container {
+  width: 52px;
+  height: 52px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #00a8ff;
+}
+
+.channel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.channel-tag {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #777;
+  font-weight: bold;
+}
+
+.channel-link {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a.channel-link:hover {
+  text-decoration: underline;
+  color: #00a8ff;
+}
+
+/* Structural Adaptability Framework Viewports */
+@media (max-width: 992px) {
+  .timeline-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: 1fr; }
+  .slide-split { grid-template-columns: 1fr; }
+  .split-left-brand, .split-right-channels { padding: 50px 30px; }
+  .market-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+#slide-10{
+
+  background-image: 
+   linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    
+    /* Layer 2: Deep, dark blue gradient backdrop */
+    linear-gradient(135deg, #020617 0%, #071430 50%, #0f2d5c 100%);
+
+  
+ background-size: 40px 40px, 40px 40px, auto;
+
+
+}
+
+.channel-icon-container {
+  width: 50px;           
+  height: 50px;          
+  display: flex;        
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;      
+}
+
+.channel-icon-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+}
+
+.logo-icon-circle {
+  width: 48px;           
+  height: 48px;         
+  border-radius: 50%;    
+  display: inline-flex;  
+  align-items: center;   
+  justify-content: center;
+  overflow: hidden;     
+}
+
+.logo-icon-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.transparent-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 70vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.investor-brief {
+    text-align: right;
+}
+
+.investor-brief p {
+    margin: 0;
+    padding: 2px 0;
+}
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="slide" id="slide-1">
+
+        <div class="header">
+
+            <div class="logo-container">
+                <img src="./img_files/infintin.png" alt="Infintin Logo" class="logo-img" height="100px">
+    
+                <div class="brand-text">
+                    <h2>INFINTIN</h2>
+                    <p>MOBILITY SOLUTIONS</p>
+                </div>
+            </div>
+
+            <div class="transparent-box">
+                <div class="investor-brief">
+                    <p>INVESTOR BRIEF</p>
+                    <p>PRE-SEED · JAN 2026</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero-content">
+            <div class="tagline"> — RARE-EARTH-FREE · BLDC + SRM </div>
+            <h1 style="font-size: 80px;"> Precision Motors for <br> HVAC & <span>Automation</span> </h1>
+            <p class="hero-description" style="font-size: 20px;">
+                High-efficiency BLDC & SRM (Switched Reluctance Motor)
+                motors with integrated control — zero rare earth,
+                ~91.69% efficient, engineered and made in India.
+            </p>
+        </div>
+
+</section>
+
+    <!-- SLIDE 2 -->
+    <section class="slide" id="slide-2">
+
+        <div class="about-section">
+
+            <div class="about-label">
+                ABOUT INFINTIN
+            </div>
+
+            <h1 class="about-title">
+                Customised electric motors —
+                <br>
+                rare-earth-free by design.
+            </h1>
+
+            <div class="about-content">
+
+                <div class="about-left">
+
+                    <p class="about-description">
+                        Develop cutting-edge, sustainable motor solutions that
+                        eliminate the need for rare-earth elements while
+                        maintaining optimal performance and applicability.
+                    </p>
+
+                    <div class="stats-row">
+
+                        <div class="stat-card">
+                            <div class="stat-number">91.69%</div>
+                            <div class="stat-text">MOTOR EFFICIENCY</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-number white">₹22L</div>
+                            <div class="stat-text">GRANTS SECURED</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-number white">35yrs</div>
+                            <div class="stat-text">COMBINED EXPERTISE</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="snapshot-box">
+
+                    <h3>COMPANY SNAPSHOT</h3>
+
+                    <ul>
+
+                        <li>
+                            Incorporated <strong>6 Nov 2023</strong> to manufacture customised electric motors.
+                        </li>
+
+                        <li>
+                            Incubated at <strong>AIC – Anna Incubator & ITEL Labs.</strong>
+                        </li>
+
+                        <li>
+                            Bootstrapped + grants from
+                            <strong>DST NIDHI SSP, EDII TN & ITEL Foundation.</strong>
+                        </li>
+
+                        <li>
+                            Mentored via the <strong>IIT Madras</strong> network.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="slide" id="slide-3">
+
+    <div class="problem-label">
+        — THE PROBLEM
+    </div>
+
+    <h1 class="problem-title">
+        Four compounding problems. Two markets.
+    </h1>
+
+    <div class="problem-grid">
+
+        <!-- Card 1 -->
+        <div class="problem-card">
+
+            <div class="card-number">01</div>
+
+            <div class="icon-box">🌀</div>
+
+            <h3>Inefficient HVAC motors</h3>
+
+            <p>
+                Induction motors in fan coil units run at only ~70% —
+                wasting nearly a third of every unit of electricity as tariffs climb.
+            </p>
+
+            <div class="highlight">
+                <span>40%</span>
+                OF BUILDING ENERGY IS HVAC
+            </div>
+
+        </div>
+
+        <!-- Card 2 -->
+        <div class="problem-card">
+
+            <div class="card-number">02</div>
+
+            <div class="icon-box">🌐</div>
+
+            <h3>Rare-earth dependency</h3>
+
+            <p>
+                China's April-2025 export controls disrupted PM-motor supply.
+                India's import waivers expire September 2026.
+            </p>
+
+            <div class="highlight">
+                <span>Sep ’26</span>
+                WAIVER EXPIRY DEADLINE
+            </div>
+
+        </div>
+
+        <!-- Card 3 -->
+        <div class="problem-card">
+
+            <div class="card-number">03</div>
+
+            <div class="icon-box">⚙️</div>
+
+            <h3>AGV motor-control failures</h3>
+
+            <p>
+                Off-the-shelf drives with poor torque control and fault
+                handling cause costly unplanned downtime on automation lines.
+            </p>
+
+            <div class="highlight">
+                <span>↑32%</span>
+                AGV ADOPTION BY 2027
+            </div>
+
+        </div>
+
+        <!-- Card 4 -->
+        <div class="problem-card">
+
+            <div class="card-number">04</div>
+
+            <div class="icon-box">🔗</div>
+
+            <h3>No integrated solution</h3>
+
+            <p>
+                Motor and controller are sourced separately —
+                integration failures, sub-optimal tuning,
+                unclear accountability.
+            </p>
+
+            <div class="highlight">
+                <span>2yr</span>
+                PAYBACK ON UPGRADES TODAY
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="slide3-footer">
+        <span>INFINTIN</span>
+        <span>INVESTOR BRIEF · 03</span>
+    </div>
+
+</section>
+
+    <section class="slide" id="slide-4">
+
+    <div class="section-label">
+         WHY NOW
+    </div>
+
+    <h1 class="why-title">
+        Four converging forces. One window.
+    </h1>
+
+    <p class="why-subtitle">
+        Each force alone creates demand. Together they create an imperative
+        every HVAC OEM and warehouse operator is feeling in 2026.
+    </p>
+
+    <div class="force-grid">
+
+        <div class="force-card blue">
+            <div class="force-number">01</div>
+            <h3>Energy-price urgency</h3>
+            <p>
+                Rising tariffs have compressed FCU efficiency-upgrade
+                payback from 7–10 years to under 2.
+            </p>
+        </div>
+
+        <div class="force-card light">
+            <div class="force-number">02</div>
+            <h3>Rare-earth supply shock</h3>
+            <p>
+                2025 export controls disrupted PM supply;
+                India's waivers expire Sept 2026.
+                Infintin removes the dependency.
+            </p>
+        </div>
+
+        <div class="force-card blue">
+            <div class="force-number">03</div>
+            <h3>AGV automation surge</h3>
+            <p>
+                E-commerce and the PLI scheme drive demand
+                for reliable, locally-sourced AGV motor +
+                drive systems.
+            </p>
+        </div>
+
+        <div class="force-card light">
+            <div class="force-number">04</div>
+            <h3>Regulatory mandate</h3>
+            <p>
+                India's PAT scheme and BEE ratings create
+                hard compliance deadlines — urgent,
+                not optional.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="slide" id="slide-5">
+
+    <div class="section-label">
+        — THE TECHNOLOGY
+    </div>
+
+    <h1 class="technology-title">
+        BLDC precision. Zero rare earth. Integrated control.
+    </h1>
+
+    <div class="technology-layout">
+
+        <div class="technology-left">
+
+            <div class="tech-item">
+                <span>01</span>
+                <div>
+                    <h3>30% drop in energy use</h3>
+                    <p>
+                        A drop-in replacement HVAC motor —
+                        no rare earth, no complex installation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tech-item">
+                <span>02</span>
+                <div>
+                    <h3>E-shape stator, magnet-free rotor</h3>
+                    <p>
+                        A novel design improves flux utilisation and
+                        cuts flux reversal — the primary loss source.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tech-item">
+                <span>03</span>
+                <div>
+                    <h3>Intelligent power converter</h3>
+                    <p>
+                        Peak efficiency across the full operating range —
+                        pays back from day one.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="technology-right">
+
+            <table class="comparison-table" >
+
+                <thead style="color: goldenrod;">
+                    <tr>
+                        <th>MOTOR TYPE</th>
+                        <th>EFFICIENCY</th>
+                        <th>RARE EARTH</th>
+                        <th>CONTROL</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Induction (IM)</td>
+                        <td>70%</td>
+                        <td>No</td>
+                        <td>External VFD</td>
+                    </tr>
+
+                    <tr>
+                        <td>PMSM</td>
+                        <td>93%</td>
+                        <td>Yes</td>
+                        <td>Separate drive</td>
+                    </tr>
+
+                    <tr>
+                        <td>Generic BLDC</td>
+                        <td>85%</td>
+                        <td>Yes</td>
+                        <td>Separate drive</td>
+                    </tr>
+
+                    <tr class="highlight-row">
+                        <td>INFINTIN BLDC</td>
+                        <td>91.69%</td>
+                        <td>No</td>
+                        <td>Integrated ✓</td>
+                    </tr>
+
+                    <tr class="highlight-row">
+                        <td>INFINTIN 6/5 SRM</td>
+                        <td>91.69%</td>
+                        <td>No</td>
+                        <td>Integrated ✓</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="slide slide-dark" id="slide-6">
+  <div class="slide-container">
+    <header class="slide-header">
+      <p class="slide-tagline">SMART MOTORS &bull; PERFORMANCE</p>
+      <h2 class="slide-title">Our 6/5 SRM cuts losses by 78%.</h2>
+    </header>
+
+    <div class="slide-content grid-2col">
+      <div class="table-container">
+        <table class="performance-table">
+          <thead>
+            <tr style="color: goldenrod;font-size: 20px;">
+              <th>PARAMETER</th>
+              <th>12/8 SRM</th>
+              <th class="text-accent">6/5 SRM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Power</td>
+              <td>500 W</td>
+              <td>500 W</td>
+            </tr>
+            <tr>
+              <td>Torque</td>
+              <td>1.70 Nm</td>
+              <td class="text-bold">1.84 Nm</td>
+            </tr>
+            <tr>
+              <td>Speed</td>
+              <td>2800 rpm</td>
+              <td>2800 rpm</td>
+            </tr>
+            <tr>
+              <td>Total losses</td>
+              <td>183 W</td>
+              <td class="text-accent text-bold">41 W</td>
+            </tr>
+            <tr>
+              <td>Acoustic noise</td>
+              <td>70–85 dB</td>
+              <td>65–75 dB</td>
+            </tr>
+            <tr>
+              <td>Efficiency</td>
+              <td>65.00%</td>
+              <td class="text-accent text-bold">91.69%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value text-accent">↓78%</div>
+          <div class="metric-label">LOSSES VS 12/8 SRM<br><span class="text-muted">(41W VS 183W)</span></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">91.69%</div>
+          <div class="metric-label text-yellow">VALIDATED EFFICIENCY<br>6/5 SRM DESIGN</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">0</div>
+          <div class="metric-label text-yellow">RARE-EARTH MAGNETS<br>REQUIRED</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">2-in-1</div>
+          <div class="metric-label text-yellow">MOTOR + CONTROLLER<br>AS ONE UNIT</div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+</section>
+
+<section class="slide slide-dark" id="slide-7">
+  <div class="slide-container">
+    <header class="slide-header">
+      <h3 class="slide-pretitle">- PRODUCTS &amp; PRICING</h3>
+      <h2 class="slide-title text-accent">Two segments. One integrated platform.</h2>
+    </header>
+
+    <div class="slide-content pricing-grid">
+      <div class="pricing-card">
+        <div class="card-header">
+          <span class="card-type">PRIMARY</span>
+          <span class="card-badge">HVAC</span>
+        </div>
+        <div class="card-main">
+          <div class="card-spec">0.075 - 0.5 <span class="unit">kW</span></div>
+          <p class="card-product-name">BLDC FCU MOTOR + CONTROLLER</p>
+        </div>
+        <div class="card-details">
+          <div class="detail-row"><span>EFFICIENCY</span><span class="text-bold">91.69%</span></div>
+          <div class="detail-row"><span>PRICE (0.075KW)</span><span class="text-bold">&#8377;13,500</span></div>
+          <div class="detail-row"><span>RARE EARTH</span><span class="text-green text-bold">None  ✔</span></div>
+        </div>
+      </div>
+
+      <div class="pricing-card">
+        <div class="card-header">
+          <span class="card-type">PRIMARY</span>
+          <span class="card-badge">AGV</span>
+        </div>
+        <div class="card-main">
+          <div class="card-spec">1-3 <span class="unit">HP</span></div>
+          <p class="card-product-name">BLDC AGV MOTOR + DRIVE</p>
+        </div>
+        <div class="card-details">
+          <div class="detail-row"><span>CONTROL</span><span class="text-bold">Precision FOC</span></div>
+          <div class="detail-row"><span>PRICE (0.7KW)</span><span class="text-bold">&#8377;45,000</span></div>
+          <div class="detail-row"><span>HEAVY RARE EARTH</span><span class="text-green text-bold">None  ✔</span></div>
+        </div>
+      </div>
+
+      <div class="pricing-card">
+        <div class="card-header">
+          <span class="card-type">HVAC &amp;bull; LARGER</span>
+        </div>
+        <div class="card-main">
+          <div class="card-spec">4-13 <span class="unit">HP</span></div>
+          <p class="card-product-name">SRM AHU MOTOR + CONTROLLER</p>
+        </div>
+        <div class="card-details">
+          <div class="detail-row"><span>CLASS</span><span class="text-bold">IE4-IE5</span></div>
+          <div class="detail-row"><span>PRICE (3.75KW)</span><span class="text-bold">&#8377;75,000</span></div>
+          <div class="detail-row"><span>MARGIN</span><span class="text-bold">43-50%</span></div>
+        </div>
+      </div>
+
+      <div class="pricing-card">
+        <div class="card-header">
+          <span class="card-type">RECURRING</span>
+        </div>
+        <div class="card-main">
+          <div class="card-spec">AMC <span class="unit">&amp; svc</span></div>
+          <p class="card-product-name">MOTOR CONTROL &amp; AFTER-SALES</p>
+        </div>
+        <div class="card-details">
+          <div class="detail-row"><span>AMC (4KW)</span><span class="text-bold">&#8377;19,500/yr</span></div>
+          <div class="detail-row"><span>MARGIN</span><span class="text-bold">70-80%</span></div>
+          <div class="detail-row"><span>ATTACH RATE</span><span class="text-bold">30%</span></div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+<section class="slide slide-dark" id="slide-8">
+  <div class="slide-container">
+    <header class="slide-header">
+      <h3 class="slide-pretitle" style="color: aqua;">&mdash; COMPETITORS &amp; DIFFERENTIATORS</h3>
+      <h2 class="slide-title" style="color: goldenrod;">Where Infintin pulls ahead.</h2>
+    </header>
+
+    <div class="slide-content Matrix-container">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th class="feature-col"></th>
+            <th class="comp-col text-accent text-bold">INFINTIN</th>
+            <th class="comp-col text-uppercase">CHARA TECHNOLOGIES</th>
+            <th class="comp-col text-uppercase">ADITYA AVARTAN</th>
+            <th class="comp-col text-uppercase">VIRIDIAN IGNI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feature-name">VARIOUS VOLTAGE RANGE</td>
+            <td class="check-cell text-green"> ✔</td>
+            <td class="check-cell text-muted"> ✔</td>
+            <td class="check-cell text-muted"> ✔</td>
+            <td class="check-cell text-muted"> ✔</td>
+          </tr>
+          <tr>
+            <td class="feature-name">IE4 EFFICIENCY</td>
+            <td class="check-cell text-green"> ✔</td>
+            <td class="check-cell text-muted"> ✔</td>
+            <td class="check-cell text-muted"> ✔</td>
+            <td class="check-cell text-muted">-</td>
+          </tr>
+          <tr>
+            <td class="feature-name">NON-PM (RARE-EARTH-FREE) MOTORS</td>
+            <td class="check-cell text-green"> ✔</td>
+            <td class="check-cell text-muted">-</td>
+            <td class="check-cell text-muted"> ✔</td>
+            <td class="check-cell text-muted">-</td>
+          </tr>
+          <tr>
+            <td class="feature-name">PROPRIETARY CONTROL TECHNOLOGY</td>
+            <td class="check-cell text-green"> ✔</td>
+            <td class="check-cell text-muted"> ✔</td>
+            <td class="check-cell text-muted">✔</td>
+            <td class="check-cell text-muted">-</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Weight optimization</td>
+            <td class="check-cell text-green"> ✔</td>
+            <td class="check-cell text-muted">-</td>
+            <td class="check-cell text-muted"> -</td>
+            <td class="check-cell text-muted"> ✔</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Low torque ripple</td>
+            <td class="check-cell text-green"> ✔</td>
+            <td class="check-cell text-muted"> ✔</td>
+            <td class="check-cell text-muted">✔</td>
+            <td class="check-cell text-muted">-</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="matrix-summary" style="color: goldenrod; font-size: 20px;">
+        <p>Only Infintin combines rare-earth-free motors, proprietary integrated control, IE4 efficiency, and weight optimisation in one platform.</p>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+
+<section class="slide slide-dark grid-bg" id="slide-9">
+  <div class="slide-container">
+    <header class="slide-header">
+      <p class="slide-tagline" style="font-size: 25px;">MARKET OPPORTUNITY</p>
+      <h2 class="slide-title font-sans">Two growing markets. One platform.</h2>
+    </header>
+
+    <div class="slide-content market-bars-container">
+      <div class="market-row">
+        <span class="market-lbl">SOM</span>
+        <div class="bar-track">
+          <div class="bar-fill som-fill">
+            <span class="bar-value">USD 25M</span>
+            <span class="bar-desc">India FCU beachhead - Chennai-Coimbatore OEMs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="market-row">
+        <span class="market-lbl">SAM</span>
+        <div class="bar-track">
+          <div class="bar-fill sam-fill">
+            <span class="bar-value">USD 270M</span>
+            <span class="bar-desc">India HVAC motor market &bull; 7.6% CAGR</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="market-row">
+        <span class="market-lbl">TAM</span>
+        <div class="bar-track">
+          <div class="bar-fill tam-fill">
+            <span class="bar-value">USD 1.35B</span>
+            <span class="bar-desc">Global rare-earth-free motor market &bull; 9.4% CAGR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+  </div>
+</section>
+
+<section class="slide slide-light" id="slide-10" style="background-color: rgb(62, 59, 59);">
+  <div class="slide-container">
+    <header class="slide-header">
+      <p class="slide-tagline" style="color: aqua; font-size: 25px;">TRACTION</p>
+      <h2 class="slide-title font-sans text-dark" style="color: goldenrod;">Not a concept. Validated and building.</h2>
+    </header>
+
+    <div class="slide-content timeline-grid" >
+      <div class="timeline-card done">
+        <div class="card-meta">
+          <span class="step-num">01</span>
+          <span class="status-badge badge-done"> ✔ Done</span>
+        </div>
+        <h4 class="timeline-heading">&#8377;20-22L grants secured</h4>
+        <p class="timeline-desc">Awarded by DST, EDII &amp; ITEL Foundation.</p>
+      </div>
+
+      <div class="timeline-card done">
+        <div class="card-meta">
+          <span class="step-num">02</span>
+          <span class="status-badge badge-done"> ✔ Done</span>
+        </div>
+        <h4 class="timeline-heading">Converter prototype built</h4>
+        <p class="timeline-desc">Power electronics fully working &amp; validated.</p>
+      </div>
+
+      <div class="timeline-card done">
+        <div class="card-meta">
+          <span class="step-num">03</span>
+          <span class="status-badge badge-done"> ✔ Done</span>
+        </div>
+        <h4 class="timeline-heading">Motor design validated</h4>
+        <p class="timeline-desc">6/5 SRM at 91.69% &mdash; improved flux, zero rare earth.</p>
+      </div>
+
+      <div class="timeline-card active">
+        <div class="card-meta">
+          <span class="step-num">04</span>
+          <span class="status-badge badge-now">&#9881; Now</span>
+        </div>
+        <h4 class="timeline-heading">Manufacturing underway</h4>
+        <p class="timeline-desc">First physical unit in production at &#8377;2.5L/unit.</p>
+      </div>
+
+      <div class="timeline-card active">
+        <div class="card-meta">
+          <span class="step-num">05</span>
+          <span class="status-badge badge-now">&#9881; Now</span>
+        </div>
+        <h4 class="timeline-heading">Pilot customer interest</h4>
+        <p class="timeline-desc">Intra Mobility, Hetch International, iSwiftPro.</p>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+
+<section class="slide slide-light" id="slide-11">
+  <div class="slide-container">
+    <header class="slide-header">
+      <p class="slide-tagline">OUR TEAM</p>
+      <h2 class="slide-title font-sans text-dark">35 years of domain expertise.</h2>
+    </header>
+
+    <div class="slide-content team-grid">
+      <div class="team-card">
+        <div class="profile-header">
+          <div class="profile-avatar">MA</div>
+          <div class="profile-identity">
+            <span class="profile-role">FOUNDER &bull; CEO</span>
+            <h4 class="profile-name">Dr. M. Augustine</h4>
+          </div>
+        </div>
+        <p class="profile-bio">Motor Technology Lead &bull; Ph.D Electrical Engineering. 15 yrs in SRM design, thermal, structural &amp; material analysis. Inventor, 6/5 SRM.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="profile-header">
+          <div class="profile-avatar">AI</div>
+          <div class="profile-identity">
+            <span class="profile-role">CO-FOUNDER &bull; CTO</span>
+            <h4 class="profile-name">Dr. A. Infantraj</h4>
+          </div>
+        </div>
+        <p class="profile-bio">Power Electronics &amp; Controls &bull; M.E Applied Electronics. PM BLDC design, embedded drive, motor control &amp; fault diagnosis. Ph.D candidate.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="profile-header">
+          <div class="profile-avatar">PC</div>
+          <div class="profile-identity">
+            <span class="profile-role">CO-FOUNDER &bull; CFO</span>
+            <h4 class="profile-name">Mr. P. Chandrasekhar</h4>
+          </div>
+        </div>
+        <p class="profile-bio">Mechanical Engineering &amp; Operations &bull; M.E Mechanical. Component design, thermal simulation, project management, manufacturing.</p>
+      </div>
+    </div>
+
+    <div class="advisors-panel">
+      <div class="advisor-row primary-advisor">
+        <span class="advisor-label">MENTOR &amp; ADVISORS</span>
+        <span class="advisor-content"><strong class="text-dark">Prof. L. Kannan</strong> &mdash; Professor of Practice, IIT Madras</span>
+        <br>
+        <span class="advisor-content"><strong class="text-dark" style="padding-left: 160px;">Mr.A.J. Balasubramaniyam</strong> &mdash; Director - Indian Operations - Aigilx Health </span>
+      </div>
+      <div class="advisor-row secondary-advisors">
+        <span class="advisor-label">CONSULTANTS</span>
+       
+        <span class="advisor-content"><strong class="text-dark" >Mr.Karthik Anbalagan </strong>(Marketing) · <strong class="text-dark">Dr. Senthilkumaran </strong>(Control Design) · <strong class="text-dark">Wg.  Cdr.  Edward Jeyaseelan Kennedy (Retd) </strong>(Production)</span>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+<section class="slide slide-dark grid-bg" id="slide-12">
+  <div class="slide-container">
+    <header class="slide-header">
+      <p class="slide-tagline">THE ASK</p>
+      <h2 class="slide-title font-sans">Raising <span class="text-accent">&#8377;1.5 Cr</span> as a CCD.</h2>
+      <p class="slide-subtitle">To complete prototype testing, certification and pilot sales &mdash; plus team, HR and infrastructure. 18-month runway, &#8377;22L grants already in.</p>
+    </header>
+
+    <div class="slide-content grid-2col">
+      <div class="funds-allocation">
+        <p class="allocation-title">USE OF FUNDS</p>
+        
+        <div class="progress-block">
+          <div class="progress-info"><span>Commercial pilots (&times;2 &mdash; FCU &amp; AGV)</span><span class="text-bold">&#8377;45L &bull; 29%</span></div>
+          <div class="progress-bar-track"><div class="progress-bar-fill" style="width: 29%;"></div></div>
+        </div>
+
+        <div class="progress-block">
+          <div class="progress-info"><span>Patent + operations + team</span><span class="text-bold">&#8377;60L &bull; 36%</span></div>
+          <div class="progress-bar-track"><div class="progress-bar-fill" style="width: 36%;"></div></div>
+        </div>
+
+        <div class="progress-block">
+          <div class="progress-info"><span>Certification (BEE / NABL)</span><span class="text-bold">&#8377;19L &bull; 19%</span></div>
+          <div class="progress-bar-track"><div class="progress-bar-fill" style="width: 19%;"></div></div>
+        </div>
+
+        <div class="progress-block">
+          <div class="progress-info"><span>Motor manufacturing</span><span class="text-bold">&#8377;26L &bull; 16%</span></div>
+          <div class="progress-bar-track"><div class="progress-bar-fill" style="width: 16%;"></div></div>
+        </div>
+      </div>
+
+      <div class="ask-metrics">
+        <div class="metric-block-card">
+          <div class="mb-value text-accent">&#8377;1.5 Cr</div>
+          <div class="mb-label">CURRENT RAISE &bull; CCD</div>
+        </div>
+        <div class="metric-block-card">
+          <div class="mb-value">&#8377;22L</div>
+          <div class="mb-label">GRANTS RAISED &bull; 4 BODIES</div>
+        </div>
+        <div class="metric-block-card">
+          <div class="mb-value">18 mo</div>
+          <div class="mb-label">RUNWAY</div>
+        </div>
+        <div class="metric-block-card blue-highlight-card">
+          <div class="mb-value">&#8377;5-10 Cr</div>
+          <div class="mb-label">SERIES A TARGET</div>
+        </div>
+      </div>
+    </div>
+<br><br><br>
+    <footer class="slide-footer">
+      <span class="brand-logo">INFINTIN</span>
+      <span class="page-number">INVESTOR BRIEF &bull; 12</span>
+    </footer>
+  </div>
+</section>
+
+<section class="slide-split" id="slide-13">
+  <div class="split-left-brand">
+    <div class="brand-top">
+      <div class="logo-box-mock">
+        <span class="logo-icon-circle"> <img src="./img_files/infintin.png"></span>
+      </div>
+      <span class="brand-txt-title">INFINTIN</span>
+    </div>
+    
+    <div class="brand-main-message">
+      <p class="slide-tagline text-light opacity-7">GET IN TOUCH</p>
+      <h2 class="contact-cta">Let's build the future together.</h2>
+      <p class="contact-subtext">We're raising our pre-seed round and looking for pilot customers and investors in rare-earth-free motor technology.</p>
+    </div>
+    
+    <span class="brand-mission-statement">Transforming the Future of Electric Motors</span>
+  </div>
+
+  <div class="split-right-channels grid-bg">
+    <div class="channels-stack-wrapper">
+      
+      <div class="channel-card-row">
+        <div class="channel-icon-container">&#9993;</div>
+        <div class="channel-body">
+          <span class="channel-tag">EMAIL</span>
+          <a href="mailto:admin@infintin.in" class="channel-link">admin@infintin.in</a>
+        </div>
+      </div>
+
+      <div class="channel-card-row">
+        <div class="channel-icon-container">&#128222;</div>
+        <div class="channel-body">
+          <span class="channel-tag">WHATSAPP / PHONE</span>
+          <span class="channel-link">+91 97903 95731</span>
+        </div>
+      </div>
+
+      <div class="channel-card-row">
+        <div class="channel-icon-container"><img src="./img_files/infintin.png"> </div>
+        <div class="channel-body">
+          <span class="channel-tag">WEB</span>
+          <a href="https://www.infintin.in" target="_blank" class="channel-link" style="height: fit-content;">www.infintin.in</a>
+        </div>
+      </div>
+
+      <div class="channel-card-row">
+        <div class="channel-icon-container">&#128205;</div>
+        <div class="channel-body">
+          <span class="channel-tag">BASED IN</span>
+          <span class="channel-link">Guduvancherry, Chengalpattu</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    
+
+</body>
+</html>
