@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infintin Mobility Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- Reset & Core Variables --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --bg-color: #030708;
+            --card-bg: #0b131f;
+            --primary-blue: #0076df;
+            --text-light: #ffffff;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Header / Navbar --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(3, 7, 8, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-blue);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, var(--primary-blue) 0%, transparent 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--primary-blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--primary-blue);
+        }
+
+        .btn-touch {
+            border: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .btn-touch:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        /* --- Global Sections Layout --- */
+        section {
+            padding: 100px 20px 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-size: 1rem;
+        }
+
+        /* --- Section 1: Hero --- */
+        #home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #0a192f 0%, var(--bg-color) 70%);
+            padding-top: 80px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            max-width: 800px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-title span {
+            color: var(--primary-blue);
+        }
+
+        .hero-subtitle {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .btn-explore {
+            border: 1px solid var(--primary-blue);
+            padding: 12px 30px;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            background: rgba(0, 118, 223, 0.1);
+            transition: background 0.3s;
+        }
+
+        .btn-explore:hover {
+            background: var(--primary-blue);
+        }
+
+        /* --- Section 2: Pioneering Technology --- */
+        .tech-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .tech-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Temporary 3D styled mock placeholder matching image */
+        .motor-placeholder {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #475569, #1e293b);
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(0,118,223,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #64748b;
+        }
+
+        .tech-cards-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tech-stack-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .tech-stack-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .tech-stack-card h3 i {
+            color: var(--primary-blue);
+        }
+
+        .tech-stack-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- Section 3: Products --- */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .product-img-box {
+            width: 100%;
+            height: 200px;
+            background-color: #152238;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+
+        .product-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .product-meta {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .product-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .product-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .product-features li i {
+            color: var(--primary-blue);
+            margin-top: 4px;
+        }
+
+        /* --- Section 4: Edge --- */
+        .edge-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .edge-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .edge-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .edge-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .edge-card h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .edge-card p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* --- Section 5: Team --- */
+        .team-subtitle {
+            text-align: center;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .team-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            perspective: 1000px;
+            min-height: 280px;
+        }
+
+        .team-card-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            padding: 40px 20px;
+        }
+
+        /* Trigger active/hover flip style state matching screenshot 819 */
+        .team-card.flipped .team-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .profile-front, .profile-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .profile-front {
+            background-color: var(--card-bg);
+        }
+
+        .profile-back {
+            background-color: var(--primary-blue);
+            transform: rotateY(180deg);
+            color: white;
+        }
+
+        .avatar-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-blue);
+            margin-bottom: 15px;
+            overflow: hidden;
+            background-color: #152238;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar-box i {
+            font-size: 3rem;
+            color: var(--text-muted);
+        }
+
+        .team-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .team-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .profile-back p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .profile-back a {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        /* --- Section 6: Contact --- */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background-color: #0e1724;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            color: white;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: none;
+            margin-bottom: 20px;
+        }
+
+        .btn-submit-box {
+            text-align: center;
+        }
+
+        .btn-submit {
+            background: transparent;
+            border: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 12px 40px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .contact-info-footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        .contact-info-footer a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* --- Responsive Viewports --- */
+        @media (max-width: 992px) {
+            .products-grid, .team-grid { grid-template-columns: 1fr 1fr; }
+            .edge-grid { grid-template-columns: repeat(3, 1fr); }
+            .tech-split { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .products-grid, .team-grid, .edge-grid, .form-row { grid-template-columns: 1fr; }
+            nav { display: none; } /* Simplicity for template view */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon"><i class="fa-solid : center">I</i></div>
+                INFINTIN <span>Mobility Solutions</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">About Us</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="btn-touch">Get in Touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <h1 class="hero-title">Advancing Rare-Earth-Free Electric Motors for <span>India's Clean Mobility Future</span></h1>
+        <p class="hero-subtitle">We design and manufacture high-performance, ultra-efficient electric motors that are driving the future of mobility.</p>
+        <a href="#products" class="btn-explore">Explore Our Motors</a>
+    </section>
+
+    <section id="technology">
+        <div class="tech-split">
+            <div class="tech-visual">
+                <div class="motor-placeholder">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+            </div>
+            <div class="tech-cards-stack">
+                <h2 style="font-size: 2rem; margin-bottom: 10px;">Pioneering Technology</h2>
+                <div class="tech-stack-card">
+                    <h3><i class="fa-regular fa-eye"></i> Our Vision</h3>
+                    <p>To enable sustainable mobility and industrial automation by delivering high-efficiency motors that do not depend on rare earth materials. We are reimagining electric propulsion through rare-earth-free motor design tailored for Indian operating conditions.</p>
+                </div>
+                <div class="tech-stack-card">
+                    <h3><i class="fa-solid fa-shield-halved"></i> Our Approach</h3>
+                    <p>Our approach reduces dependence on resource-constrained materials and optimizes design to deliver high-performance, environmentally responsible powertrains.</p>
+                </div>
+                <div class="tech-stack-card">
+                    <h3><i class="fa-solid fa-building"></i> Our Commitment</h3>
+                    <p>To achieve this, we are establishing a product and research hub for traction motor development, deeply aligned with the national imperatives of "Make in India" and "Atmanirbhar Bharat."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-subtitle">Engineered for excellence, tailored for performance.</p>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-img-box"><i class="fa-solid fa-engine-turbine fa-3x"></i></div>
+                <h3>Switched Reluctance Motor</h3>
+                <p class="product-meta">1kW, 4kW and 60kW Models</p>
+                <ul class="product-features">
+                    <li><i class="fa-solid fa-check"></i> Maintenance free rotor</li>
+                    <li><i class="fa-solid fa-check"></i> IP54 compliant motor</li>
+                    <li><i class="fa-solid fa-check"></i> Plug and play power converter</li>
+                    <li><i class="fa-solid fa-check"></i> Low starting current & high starting torque</li>
+                </ul>
+            </div>
+            <div class="product-card">
+                <div class="product-img-box"><i class="fa-solid fa-microchip fa-3x"></i></div>
+                <h3>Intelligent Power Converter</h3>
+                <p class="product-meta">Proprietary Control Engine</p>
+                <ul class="product-features">
+                    <li><i class="fa-solid fa-check"></i> Proprietary control algorithm for optimal power, efficiency, and reliability</li>
+                    <li><i class="fa-solid fa-check"></i> Quick start, stop, reverse and braking capabilities</li>
+                    <li><i class="fa-solid fa-check"></i> Designed and manufactured in India</li>
+                </ul>
+            </div>
+            <div class="product-card">
+                <div class="product-img-box"><i class="fa-solid fa-bicycle fa-3x"></i></div>
+                <h3>1kW Motor</h3>
+                <p class="product-meta">Power: 1000 W | Voltage: 24 V | Speed: 2000 RPM</p>
+                <ul class="product-features">
+                    <li><i class="fa-solid fa-check"></i> <strong>Applications:</strong> e-bikes, e-rickshaws, pumps & fans</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="edge">
+        <h2 class="section-title">Our Technological Edge</h2>
+        <p class="section-subtitle">Innovation in every component, precision in every process.</p>
+        
+        <div class="edge-grid">
+            <div class="edge-card">
+                <span class="edge-icon">🌍</span>
+                <h4>Rare Earth Free Architecture</h4>
+                <p>Sustainable design that eliminates reliance on critical rare earth materials.</p>
+            </div>
+            <div class="edge-card">
+                <span class="edge-icon">📦</span>
+                <h4>Supply Chain Resilience</h4>
+                <p>Locally sourced materials for a stable and reliable production line.</p>
+            </div>
+            <div class="edge-card">
+                <span class="edge-icon">⚙️</span>
+                <h4>Reduced Lead Time</h4>
+                <p>Streamlined production and local sourcing for faster delivery.</p>
+            </div>
+            <div class="edge-card">
+                <span class="edge-icon">🔧</span>
+                <h4>Minimal Maintenance Cost</h4>
+                <p>Robust design for long-lasting performance with minimal upkeep.</p>
+            </div>
+            <div class="edge-card">
+                <span class="edge-icon">🌡️</span>
+                <h4>Better Thermal Management</h4>
+                <p>Advanced cooling systems for peak performance under any condition.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2 class="section-title">Meet Our Team</h2>
+        
+        <p class="team-subtitle">Founders</p>
+        <div class="team-grid">
+            <div class="team-card" onclick="toggleFlip(this)">
+                <div class="team-card-inner">
+                    <div class="profile-front">
+                        <div class="avatar-box"><i class="fa-solid fa-user-tie"></i></div>
+                        <h4>Dr. Augustine</h4>
+                        <p>Founder - Machine Design</p>
+                    </div>
+                    <div class="profile-back">
+                        <p>Specialist in advanced electromagnetic structural modeling and machine layout.</p>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card" onclick="toggleFlip(this)">
+                <div class="team-card-inner">
+                    <div class="profile-front">
+                        <div class="avatar-box"><i class="fa-solid fa-user-tie"></i></div>
+                        <h4>Mr. Infantraj</h4>
+                        <p>Founder - Embedded systems</p>
+                    </div>
+                    <div class="profile-back">
+                        <p>Experience in design of machine components and simulation for structural and thermal analysis. Worked on project management and mechatronics systems.</p>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card" onclick="toggleFlip(this)">
+                <div class="team-card-inner">
+                    <div class="profile-front">
+                        <div class="avatar-box"><i class="fa-solid fa-user-tie"></i></div>
+                        <h4>Mr. Chandrasekhar</h4>
+                        <p>Founder - Manufacturing & Finance</p>
+                    </div>
+                    <div class="profile-back">
+                        <p>Oversees end-to-end industrial scaling, supply networks, and capital management optimization.</p>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="team-subtitle">Advisory Board</p>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="profile-front">
+                    <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
+                    <h4>Mr. Karthik Anbalagan</h4>
+                    <p>Consultant - Marketing</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="profile-front">
+                    <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
+                    <h4>Dr. Senthilkumaran</h4>
+                    <p>Consultant - Control Design Engineer</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="profile-front">
+                    <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
+                    <h4>Wg. Cdr. Edward Jeyaseelan Kennedy (Retd)</h4>
+                    <p>Consultant - Admin & Production Engineer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Let's Build the Future Together</h2>
+        <p class="section-subtitle">Have a project in mind? We'd love to hear from you.</p>
+        
+        <div class="contact-container">
+            <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <div class="btn-submit-box">
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </div>
+            </form>
+
+            <div class="contact-info-footer">
+                <p>Email: <a href="mailto:admin@infintin.in">admin@infintin.in</a></p>
+                <p>WhatsApp/Phone: <a href="tel:+919962608717">+91-9962608717</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Infintin Mobility Solutions. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+        </div>
+    </footer>
+
+    <script>
+        // Simulates card flip toggle effect on click (from screenshot 819)
+        function toggleFlip(card) {
+            card.classList.toggle('flipped');
+        }
+
+        // Form interception logic
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out! Your message has been sent successfully.');
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>
